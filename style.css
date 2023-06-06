@@ -11,7 +11,7 @@
 /* root values */
 :root{
     --container-color: #1a1e21;
-    --second-color: rgba(77, 228, 255);
+    --second-color: hsl(31, 100%, 51%);
     --text-color: #172317;
     --bg-color: #fff;
 }
@@ -41,10 +41,6 @@ section{
     max-width: 1068px;
     margin: auto;
     width: 100%;
-}
-
-a{
-    color: #fff;
 }
 
 .home{
@@ -109,17 +105,8 @@ a{
     display: inline-block;
     margin-top: 30px;
     padding: 10px 30px;
-    background: #fff;
-    border: .8px solid #111;
-    color: #333;
     text-decoration: none;
     transition: 0.5s;
-}
-
-.btn2:hover{
-    background-color: var(--second-color);
-    border: none;
-    color: #fff;
 }
 
 .post-filter{
