@@ -406,7 +406,7 @@ body.active {
 \*-----------------------------------*/
 
 .hero {
-  background: url("../images/hero-banner.jpg") no-repeat;
+  background: url("../images/banner.png") no-repeat;
   background-size: cover;
   background-position: top center;
   margin-top: 90px;
@@ -417,6 +417,8 @@ body.active {
   justify-content: center;
   align-items: center;
   text-align: center;
+  filter: brightness(0.7);
+  opacity: 80%;
 }
 
 .hero-subtitle {
