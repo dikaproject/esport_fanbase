@@ -1,4 +1,4 @@
-root {
+:root {
 
   /**
    * colors
@@ -21,54 +21,213 @@ root {
 
   --ff-refault: "Refault", Georgia;
   --ff-oswald: 'Oswald', sans-serif;
-  --ff-poppins: 'Poppins', sans-serif; 
+  --ff-poppins: 'Poppins', sans-serif;
+
+  --fs-1: 54px;
+  --fs-2: 34px;
+  --fs-3: 30px;
+  --fs-4: 26px;
+  --fs-5: 22px;
+  --fs-6: 20px;
+  --fs-7: 18px;
+  --fs-8: 15px;
+  --fs-9: 14px;
+  --fs-10: 13px;
+  --fs-11: 12px;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.15s ease-in-out;
+  --transition-2: 0.15s ease-in;
+  --transition-3: 0.25s ease-out;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 60px;
+
+  /**
+   * clip path
+   */
+
+  --polygon-1: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+  --polygon-2: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+  --polygon-3: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+  --polygon-4: polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0);
+
+}
+
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #1F2029;
+  min-height: 100vh;
+  width: 100%;
+  background: url("../images/section-wrapper-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Tambahkan perubahan ini */
 }
 
-body {
-  background-color: var(--raisin-black-1);
+.container_cs {
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 200px;
 }
 
-.contact-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: var(--raisin-black-2);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container_cs .content_cs {
+  display: flex;
+  align-items: flex-start; /* Mengatur konten di sebelah kiri */
+  justify-content: space-between;
 }
 
-.contact-container h2 {
-  color: var(--white);
+.container_cs .content_cs .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-group label {
-  color: var(--light-gray);
+.container_cs .content_cs .left-side .details {
+  margin: 14px;
+  text-align: left; /* Mengatur teks ke kiri */
 }
 
-.form-group input,
-.form-group textarea {
-  background-color: var(--xiketic);
-  color: var(--light-gray);
-  border: 1px solid var(--platinum);
+.container_cs .content_cs .left-side .details i {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 10px;
 }
 
-.form-group textarea {
-  height: 150px;
+.container_cs .content_cs .left-side .details .topic {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.form-group button {
-  background-color: var(--orange);
-  color: var(--white);
+.container_cs .content_cs .left-side .details .text-one,
+.container_cs .content_cs .left-side .details .text-two {
+  font-size: 14px;
+  color: #afafb6;
 }
 
-.form-group button:hover {
-  background-color: var(--onyx);
+.container_cs .content_cs .right-side {
+  width: 100%; /* Ubah menjadi 100% */
+  margin-left: 0; /* Ubah menjadi 0 */
+  margin-top: 15px; /* Tambahkan perubahan ini */
 }
 
-.contact-container {
-  padding: 150px 20px; /* Menambahkan padding 100px di atas dan 20px di sisi kanan-kiri */
+.container_cs .content_cs .right-side .topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: black;
+}
+
+.container_cs .content_cs .right-side .input-box {
+  height: 55px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.container_cs .content_cs .right-side .input-box input,
+.container_cs .content_cs .right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #f0f1f8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.container_cs .content_cs .right-side .message-box {
+  min-height: 110px;
+}
+
+.container_cs .content_cs .right-side .input-box textarea {
+  padding-top: 6px;
+}
+
+.container_cs .content_cs .right-side .button {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.container_cs .content_cs .right-side .button input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: hsl(31, 100%, 51%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container_cs .content_cs .right-side .button input[type="button"]:hover {
+  background: hsl(31, 100%, 51%);
+}
+
+@media (max-width: 950px) {
+  .container_cs {
+    width: 90%;
+    padding: 30px 40px 40px 35px;
+  }
+
+  .container_cs .content_cs .right-side {
+    width: 100%; /* Ubah menjadi 100% */
+    margin-left: 0; /* Ubah menjadi 0 */
+  }
+}
+
+@media (max-width: 820px) {
+  .container_cs {
+    margin: 40px 0;
+    height: 100%;
+  }
+
+  .container_cs .content_cs {
+    flex-direction: column-reverse;
+  }
+
+  .container_cs .content_cs .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container_cs .content_cs .left-side::before {
+    display: none;
+  }
+
+  .container_cs .content_cs .right-side {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0; /* Tambahkan perubahan ini */
+  }
 }
